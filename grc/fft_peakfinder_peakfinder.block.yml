@@ -1,0 +1,21 @@
+id: fft_peakfinder_peakfinder
+label: Peak finder
+category: '[Fft_peakfinder]'
+templates:
+  imports: import fft_peakfinder
+  make: fft_peakfinder.peakfinder(${vlen})
+parameters:
+- id: vlen
+  label: Vec Length
+  dtype: int
+  default: '1'
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+  vlen: ${ vlen }
+outputs:
+- label: out
+  domain: stream
+  dtype: int
+file_format: 1
